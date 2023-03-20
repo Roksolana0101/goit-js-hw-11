@@ -55,6 +55,7 @@ body {
 .submit {
   padding: 3px 27px;
     display: inline-block;
+    color: #fafafa;
   
     font-family: 'Roboto', sans-serif;
     background-color: green;
@@ -70,7 +71,7 @@ body {
 .submit:hover,
 .submit:focus {
 
-  color: darkblue;
+  
   background-color: darkgreen;
   border: 1px solid greenyellow;
 }
@@ -99,4 +100,11 @@ body {
   width: 100%;
 
   object-fit: cover;
+}
+.search-form{
+      display: flex;
+        width: 100%;
+        justify-content: center;
+        padding: 20px 0 24px;
+        gap: 24px;
 }
