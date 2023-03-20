@@ -19,6 +19,7 @@ refs.onLoadButton.disabled = true;
 refs.form.addEventListener('submit', onSearch);
 refs.onLoadButton.addEventListener('click', () => {
   refs.onLoadButton.disabled = true;
+  refs.onLoadButton.classList.add('hidden')
   onLoad();
 });
 
@@ -56,6 +57,7 @@ function onLoad() {
     console.log(page);
     if (data.total === data.totalHits) {
       refs.onLoadButton.disabled = true;
+      refs.onLoadButton.classList.add('hidden')
       Notiflix.Notify.info(
         'We are sorry, but you have reached the end of search results.'
       );
@@ -65,6 +67,7 @@ function onLoad() {
 
 function createMurkupRender(arr) {
   refs.onLoadButton.disabled = false;
+  refs.onLoadButton.classList.remove( 'hidden')
   return arr
     .map(
       ({
